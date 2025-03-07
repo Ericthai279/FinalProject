@@ -7,11 +7,11 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const navigation = useNavigation();
 
-  const API_BASE_URL = "http://192.168.42.1:8800"; 
+  const API_BASE_URL = "https://5554-171-244-188-41.ngrok-free.app"; 
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {
-        const res = await axios.get("${API_BASE_URL}/posts");
+        const res = await axios.get(`${API_BASE_URL}/posts`);
         setPosts(res.data);
       } catch (err) {
         console.log(err);

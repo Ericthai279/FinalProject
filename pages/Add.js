@@ -16,7 +16,7 @@ const AddPost = () => {
   const handleChange = (name, value) => {
     setPost((prev) => ({ ...prev, [name]: value }));
   };
-  const API_BASE_URL = "http://192.168.42.1:8800"; 
+  const API_BASE_URL = "https://5554-171-244-188-41.ngrok-free.app"; 
 
   const handleClick = async () => {
     try {
