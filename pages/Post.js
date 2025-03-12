@@ -7,7 +7,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const navigation = useNavigation();
 
-  const API_BASE_URL = "https://5554-171-244-188-41.ngrok-free.app"; 
+  const API_BASE_URL = "https://95c3-115-79-208-171.ngrok-free.app"; 
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {
@@ -27,7 +27,7 @@ const Posts = () => {
         text: "Delete",
         onPress: async () => {
           try {
-            await axios.delete(`${API_BASE_URL}posts/${id}`);
+            await axios.delete(`${API_BASE_URL}/posts/${id}`);
             setPosts(posts.filter((post) => post.id !== id));
           } catch (err) {
             console.log(err);
@@ -48,7 +48,7 @@ const Posts = () => {
           <Text style={styles.user}>By User {post.user_id}</Text>
           <View style={styles.buttonContainer}>
             <Button title="Delete" color="red" onPress={() => handleDelete(post.id)} />
-            <TouchableOpacity onPress={() => navigation.navigate("Update", { postId: post.id })} style={styles.updateButton}>
+            <TouchableOpacity onPress={() => navigation.navigate("UpdatePost", { postId: post.id })} style={styles.updateButton}>
               <Text style={styles.updateText}>Update</Text>
             </TouchableOpacity>
           </View>

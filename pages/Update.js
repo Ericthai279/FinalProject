@@ -18,11 +18,11 @@ const UpdatePost = () => {
   const handleChange = (name, value) => {
     setPost((prev) => ({ ...prev, [name]: value }));
   };
-  const API_BASE_URL = "https://5554-171-244-188-41.ngrok-free.app"; 
+  const API_BASE_URL = "https://95c3-115-79-208-171.ngrok-free.app"; 
   const handleClick = async () => {
     try {
       await axios.put(`${API_BASE_URL}/posts/${postId}`, post);
-      Alert.alert("Success", "Post updated successfully!", [{ text: "OK", onPress: () => navigation.navigate("Posts") }]);
+      Alert.alert("Success", "Post updated successfully!", [{ text: "OK", onPress: () => navigation.navigate("Posts", {refresh:true}) }]);
     } catch (err) {
       console.log(err);
       setError(true);

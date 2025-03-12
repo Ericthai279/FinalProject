@@ -85,6 +85,24 @@ app.delete("/posts/:id", async (req, res) => {
   }
 });
 
+// update new post
+
+app.put("/posts/:id", async (req, res) => {
+  const postId = req.params.id;
+  const { title, description, media_url } = req.body;
+  const query = "UPDATE posts SET title = $1, description = $2, media_url = $3 WHERE id = $4 RETURNING *";
+
+  try {
+    const result = await db.query(query, [title, description, media_url, postId]);
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+    res.json({ message: "Post updated successfully!", post: result.rows[0] });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Get all comments for a post
 app.get("/comments/:postId", async (req, res) => {
   const postId = req.params.postId;
@@ -112,6 +130,6 @@ app.post("/comments", async (req, res) => {
 });
 
 // Start server
-app.listen(8800, () => {
-  console.log("Server running on port 8800.");
+app.listen(3300, () => {
+  console.log("Server running on port 3300.");
 });
