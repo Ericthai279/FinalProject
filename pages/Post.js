@@ -7,7 +7,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const navigation = useNavigation();
 
-  const API_BASE_URL = "https://95c3-115-79-208-171.ngrok-free.app"; 
+  const API_BASE_URL = "https://fca6-27-74-242-54.ngrok-free.app"; 
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {

@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useRoute } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import WelcomeScreen from "./pages/Welcome.jsx";
 import AddPost from "./pages/Add";
 import Posts from "./pages/Post";
 import UpdatePost from "./pages/Update";
@@ -9,6 +10,7 @@ import UpdatePost from "./pages/Update";
 const Stack = createNativeStackNavigator();
 
 const HomeScreen = ({ navigation }: any) => {
+  
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Welcome to Social App</Text>
@@ -17,10 +19,15 @@ const HomeScreen = ({ navigation }: any) => {
         <Button title="View Posts" onPress={() => navigation.navigate("Posts")} />
         <Button title="Add Post" onPress={() => navigation.navigate("AddPost")} />
         <Button title="Update Post" onPress={() => navigation.navigate("UpdatePost")} />
+        <Button title="Welcome" onPress={() => navigation.navigate("WelcomeScreen")} />
+
+
+
       </View>
     </View>
   );
 };
+
 
 export default function App() {
   return (
@@ -30,6 +37,7 @@ export default function App() {
         <Stack.Screen name="Posts" component={Posts} />
         <Stack.Screen name="AddPost" component={AddPost} />
         <Stack.Screen name="UpdatePost" component={UpdatePost} />
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

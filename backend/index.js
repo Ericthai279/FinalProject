@@ -9,11 +9,11 @@ app.use(express.json());
 
 // PostgreSQL Database Connection
 const db = new Pool({
-  user: "postgres",  // Replace with your PostgreSQL username
+  user: "postgres",  
   host: "localhost",
-  database: "postgres",  // Ensure this matches your DBeaver database name
-  password: "012649",  // Replace with your PostgreSQL password
-  port: 5432,  // Default PostgreSQL port
+  database: "postgres", 
+  password: "012649", 
+  port: 5432,  
 });
 
 // Test database connection

@@ -11,12 +11,11 @@ const AddPost = () => {
     media_url: "",
   });
 
-  const navigation = useNavigation(); // Use React Navigation instead of react-router-dom
-
+  const navigation = useNavigation(); 
   const handleChange = (name, value) => {
     setPost((prev) => ({ ...prev, [name]: value }));
   };
-  const API_BASE_URL = "https://95c3-115-79-208-171.ngrok-free.app"; 
+  const API_BASE_URL = "https://fca6-27-74-242-54.ngrok-free.app"; 
 
   const handleClick = async () => {
     try {
