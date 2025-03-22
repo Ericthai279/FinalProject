@@ -6,6 +6,7 @@ import WelcomeScreen from "./pages/Welcome.jsx";
 import AddPost from "./pages/Add";
 import Posts from "./pages/Post";
 import UpdatePost from "./pages/Update";
+import Login from "./pages/Login.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ const HomeScreen = ({ navigation }: any) => {
         <Button title="Add Post" onPress={() => navigation.navigate("AddPost")} />
         <Button title="Update Post" onPress={() => navigation.navigate("UpdatePost")} />
         <Button title="Welcome" onPress={() => navigation.navigate("WelcomeScreen")} />
+        <Button title="Login" onPress={() => navigation.navigate("Login")} />
 
 
 
@@ -38,6 +40,7 @@ export default function App() {
         <Stack.Screen name="AddPost" component={AddPost} />
         <Stack.Screen name="UpdatePost" component={UpdatePost} />
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );

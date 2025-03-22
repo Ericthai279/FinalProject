@@ -8,6 +8,7 @@ import UpdatePost from "./pages/Update";
 import WelcomeScreen from "./pages/Welcome";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
