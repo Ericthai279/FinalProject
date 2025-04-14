@@ -6,8 +6,8 @@ import { useNavigation } from "@react-navigation/native";
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const navigation = useNavigation();
+  const API_BASE_URL = "http://192.168.31.229:3300";
 
-  const API_BASE_URL = "https://fca6-27-74-242-54.ngrok-free.app"; 
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {

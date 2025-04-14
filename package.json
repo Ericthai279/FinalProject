@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-documents/picker": "^10.1.1",
+    "@react-native-documents/viewer": "^1.0.1",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "6.10.1",
     "@rneui/themed": "^4.0.0-rc.8",
@@ -33,7 +35,8 @@
     "react-native-screens": "^3.37.0",
     "react-native-url-polyfill": "^2.0.0",
     "react-native-vector-icons": "^10.2.0",
-    "svg": "^0.1.0"
+    "svg": "^0.1.0",
+    "expo-document-picker": "~12.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.24.8",

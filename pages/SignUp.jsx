@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   footerText: {
-    textAlign: 'center',
+    textAlign: 'center',s
     color: theme.colors.text,
     fontSize: 12,
   },

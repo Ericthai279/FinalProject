@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,TextInput } from 'react-native';
+import { StyleSheet, Text, View,TextInput, Alert } from 'react-native';
 import React, { useRef, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView, Pressable } from 'react-native-gesture-handler'; // Add this import
@@ -7,6 +7,8 @@ import { theme } from '../constrants/theme';
 import Input from '../components/Input';
 import Feather from '@expo/vector-icons/Feather';
 import Button from '../components/Button';
+import { supabase } from '../lib/supabase';
+
 
 const Login = () => {
   const emailRef = useRef("");
@@ -33,10 +35,6 @@ const Login = () => {
         Alert.alert('Login', error.message);  
     }   
 }  
-
-
-
-
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}> 
